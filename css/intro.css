@@ -1,0 +1,70 @@
+h2:hover {
+    color: rgb(255, 72, 0);
+}
+
+body {
+    background: rgba(92, 90, 90, 0.356);
+}
+
+.subtitle {
+    color: rgb(220, 30, 0);
+
+}
+/* which can be written as an attribute selector below  */
+/* h2[class=subtitle] {
+    color: blue;
+} */
+
+.title {
+    color: rgba(250, 9, 9);
+}
+
+#contact-us {
+    color: rgb(235, 176, 13);
+}
+
+li:first-child {
+    color: purple;
+}
+
+/* #google-link:link {
+    color: blueviolet;
+}
+
+#google-link:visited {
+    color: red;
+} */
+
+/* <!--Json sibling selector is a selector that selects every single element that follows a different element--> */
+h2 + a {
+    color: purple;
+}
+/* This says turn every a element that follows a h2 element to blue */
+
+textarea ~ button {
+     color: orange;
+}
+/* This says every button followed/after a textarea but theyre in the same parent */
+
+/* child selector which selects the child of the element directly to it */
+ul > li {
+    color: blue;
+}
+/* this says every li inside a ul  */
+
+/* this is a descendant selector */
+ul li {
+    color: green;
+}
+
+img[src*="../img/"] {
+    border: 10px solid black;
+}
+
+#service-image {
+    height: 400px;
+    width: 70%;
+    
+    background: radial-gradient(red, green, blue);
+}
+

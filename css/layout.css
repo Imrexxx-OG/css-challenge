@@ -1,0 +1,142 @@
+/* There are absolute and relatives units in Css, read about them plus pixels are absolute n relative depending on your screen. */
+
+body {
+  font-size: smaller;
+  font-family: sans-serif, serif;
+  background: rgb(92, 73, 73, 0.1);
+  text-transform: capitalize;
+  text-align: justify;
+}
+
+input, textarea {
+  display: block;
+  margin: 10px;
+}
+
+.title {
+  color: rgb(192, 19, 19);
+  font-weight: 400;
+}
+
+.subtitle {
+  color: rgb(192, 19, 19);
+}
+
+#goku {
+  width: 300px;
+  padding: 2px;
+  /* padding: 50px 25px 0px 100px; it goes clockwise margin can also be shortened  top$buttom, right&left. */
+  border: 2px rgb(255, 196, 0) solid;
+}
+
+.italics {
+  font-style: italic;
+}
+
+#about-us-img {
+  height: 350px;
+  width: 80%;
+  margin: 15px;
+  float: right;
+}
+
+/* .site-table {
+  display: none;
+  There are other values like block, inline $ inline-block
+} */
+
+.container {
+  background-color: rgba(255, 201, 22, 0.418);
+  margin: 10px;
+  height: 300px;
+
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; add 5 more containers to use*/
+  justify-content: center;
+  /* there are other values like space-between n space-around */
+  align-items: center;
+}
+
+.container-item {
+  background-color: rgb(255, 196, 0);
+  color: white;
+  font-size: 25px;
+  text-align: center;
+
+  width: 70px;
+  line-height: 50px;
+  margin: 10px;
+}
+
+.grid-container {
+  background-color: rgb(250, 250, 250);
+  margin: 10px;
+  height: 500px;
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+  /* grid-column-gap: 150px; */
+  grid-template-rows: auto auto;
+  /* grid-row-gap: 300px; */
+  /* grid-gap: 300px 150px; */
+  /* Rows comes first then colums in above */
+  /* justify-content: space-around;
+  align-content: end; */
+
+}
+
+.grid-item {
+  color: black;
+  font-size: 25px;
+  text-align: center;
+
+  width: 70px;
+  line-height: 40px;
+  margin: 10px;
+}
+
+.submit-button {
+  margin: 20px 10px;
+  padding: 10px 15px;
+  border: none;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-weight: 600px;
+  font-size: 20px;
+  color: white;
+  background:rgb(255, 115, 22);
+  -webkit-transition: background, padding 300ms ease;
+  -moz-transition: background, padding 300ms ease;
+  -o-transition: background, padding 300ms ease;
+  /* There is a need to add browser prefixes e.g -webkit-transition, -moz-transition, -o-transition, to the transition property since not all browsers support it especially older ones*/
+  transform: matrix(1, 0.45, 0.45, 1, 100, 50);
+  /* top n right are positive while bottom n left are negative in the transform property using translate(50px, 30px)*/
+}
+
+.submit-button:hover {
+  background: rgba(255, 115, 22, 0.596);
+  padding: 20px 30px;
+  
+}
+
+#about-me {
+  /* animation-name: red-to-purple;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  /* animation-delay: -2s;  */
+  /* subtracts 2s of runtime from 4s of the animation running */
+  /* animation-iteration-count: 2;
+  animation-direction: alternate-reverse; 
+  The shoetened form of the above is below*/ 
+  -webkit-animation: red-to-orange 4s linear 0s 2 alternate-reverse;
+  -moz-animation: red-to-orange 4s linear 0s 2 alternate-reverse;
+  -ms-animation: red-to-orange 4s linear 0s 2 alternate-reverse;
+  -o-animation: red-to-orange 4s linear 0s 2 alternate-reverse;
+}
+
+@keyframes red-to-orange {
+  0% {background: red; transform: 0px, 0px;}
+  50% {background: orangered; transform: 10px, 10px;}
+  100% {background: orange; transform: 20px, 20px;}
+}
